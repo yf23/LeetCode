@@ -37,14 +37,14 @@ public class Solution {
 
         // Turn the matrix
         int[][] turnedMatrix = new int[col][row - 1];
-        int countCol = 0;
+        int turnedCol = 0;
         for (int i = 1; i < row; i++) {
-            int countRow = 0;
+            int turnedRow = 0;
             for (int j = col - 1; j >= 0; j--) {
-                turnedMatrix[countRow][countCol] = matrix[i][j];
-                countRow++;
+                turnedMatrix[turnedRow][turnedCol] = matrix[i][j];
+                turnedRow++;
             }
-            countCol++;
+            turnedCol++;
         }
 
         // Recursively output the spiral order of turned matrix
