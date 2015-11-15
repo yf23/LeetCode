@@ -38,15 +38,11 @@ public class Trie {
     }
     
     private void insertHelper(String sequence, TrieNode current) {
-        if (sequence.length() > 0) {
-            int index = (int) (sequence.charAt(0) - 'a');
-            if (current.children[index] == null) {
-                current.children[index] = new TrieNode();
-            }
-            insertHelper(sequence.substring(1), current.children[index]);
-        } else {
-            current.isWord = true;       
+        if (sequence.length == 0) current.isWord = true;
+        if (current.children[sequence.charAt(0) - 'a'] == null) {
+            current.children[sequence.charAt(0) - 'a'] = new TrieNode();
         }
+        insertHelper(sequence.substring(1), current.children[sequence.charAt(0) - 'a']);
     }
 
     // Returns if the word is in the trie.
