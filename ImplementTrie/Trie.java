@@ -38,7 +38,7 @@ public class Trie {
     }
     
     private void insertHelper(String sequence, TrieNode current) {
-        if (sequence.length == 0) current.isWord = true;
+        if (sequence.length() == 0) { current.isWord = true; return; }
         if (current.children[sequence.charAt(0) - 'a'] == null) {
             current.children[sequence.charAt(0) - 'a'] = new TrieNode();
         }
