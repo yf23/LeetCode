@@ -20,9 +20,5 @@ class Solution(object):
         """
         nums = []
         for s in tokens:
-            if s.lstrip('-').isdigit():
-                nums.append(float(s))
-            else:
-                nums.append(int(eval(str(nums.pop(-2)) + s + str(nums.pop(-1)))))
-        return int(nums[0])
-        
+            nums.append(float(s) if s.lstrip('-').isdigit() else int(eval(str(nums.pop(-2)) + s + str(nums.pop(-1)))))
+        return int(nums.pop())
