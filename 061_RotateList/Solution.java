@@ -1,26 +1,26 @@
-/*	
-	Rotate List
+/*  
+    Rotate List
 
-	Given a list, rotate the list to the right by k places, where k is non-negative.
+    Given a list, rotate the list to the right by k places, where k is non-negative.
 
-	For example:
-	Given 1->2->3->4->5->NULL and k = 2,
-	return 4->5->1->2->3->NULL.
-	
-	Solution:
-	A list with length n.
-	Let k = k mod n (which makes k < n).
-	List 
-		a_0 -> a_1 -> ... -> a_(n-k-1) -> a_(n-k) -> a_(n-k+1) -> ... -> a_(n-1) -> NULL 
-	will become
-		a_(n-k) -> a_(n-k+1) -> ... -> a_(n-1) -> a_0 -> a_1 -> ... -> a_(n-k-1) -> NULL
-	
+    For example:
+    Given 1->2->3->4->5->NULL and k = 2,
+    return 4->5->1->2->3->NULL.
+    
+    Solution:
+    A list with length n.
+    Let k = k mod n (which makes k < n).
+    List 
+        a_0 -> a_1 -> ... -> a_(n-k-1) -> a_(n-k) -> a_(n-k+1) -> ... -> a_(n-1) -> NULL 
+    will become
+        a_(n-k) -> a_(n-k+1) -> ... -> a_(n-1) -> a_0 -> a_1 -> ... -> a_(n-k-1) -> NULL
+    
     Yu Fu, 09/27/2016
  */
 
 public class Solution {
     public ListNode rotateRight(ListNode head, int k) {
-    	// If empty list or only one node, return as the same.
+        // If empty list or only one node, return as the same.
         if (head == null || head.next == null) return head;
         // Count length of the list.
         ListNode cur = head;

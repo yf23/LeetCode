@@ -1,5 +1,5 @@
-/*	
-	Merge k Sorted Lists
+/*  
+    Merge k Sorted Lists
 
     Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 
@@ -9,7 +9,7 @@
     Complexity:
     If there are k lists with length n,
     the algorithm is O(n * k * log k).
-	
+    
     Yu Fu, 09/27/2016
  */
 
