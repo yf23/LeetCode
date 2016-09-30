@@ -40,14 +40,13 @@ public class Solution {
     }
     
     private int helper(List<NestedInteger> nestedList, int depth) {
-        // If item in list is integer, add to sum.
+        // If item in list is integer, add item * depth to sum.
         // If item in list is list, get the weighted sum of the list, then add to sum.
         int sum = 0;
         for (NestedInteger n : nestedList) {
-            if (n.isInteger()) sum += n.getInteger();
+            if (n.isInteger()) sum += n.getInteger() * depth;
             else sum += helper(n.getList(), depth + 1);
         }
-        // Weights sum by depth.
-        return sum * depth;
+        return sum;
     }
 }
