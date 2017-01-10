@@ -28,7 +28,7 @@
     Explanation: The two heater was placed in the position 1 and 4.
     We need to use radius 1 standard, then all the houses can be warmed.
 
-    Yu Fu, Jan/3/2017
+    Yu Fu, 01/03/2017
  */
  
 public class Solution {

@@ -21,7 +21,7 @@
     Go through the array once, for a number n, mark the number at index n - 1 as negative.
     Go through the array again. Number at index d with positive value means d + 1 does not appear.
 
-    Yu Fu, 12/14/2016
+    Yu Fu, 01/03/2017
  */
 
 public class Solution {
